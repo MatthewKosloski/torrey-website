@@ -1,0 +1,19 @@
+.torrey-select {
+    width: auto;
+}
+
+.torrey-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.torrey-form-control {
+    font-family: consolas;
+    height: 25vh;
+}
+
+.torrey-form-control--output[readonly] {
+    background-color: #000;
+    color: #fff;
+}

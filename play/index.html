@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Torrey Playground</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="/"
+                            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                            <h1 class="fs-2">Torrey Playground</h1>
+                        </a>
+                        <p class="lead">An online environment that enables anyone to write, compile, assemble, and
+                            execute Torrey programs in the cloud.</p>
+                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#aboutModal">
+                            How it works
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row mb-4">
+                    <div class="col">
+                        <textarea id="js-textarea-input" class="form-control torrey-form-control torrey-form-control--input"
+                            spellcheck="false">
+(println
+  (let [x 2 y (* 2 x)]
+    (+ x y)))
+                        </textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 torrey-controls">
+                        <button type="button" id="js-run" class="btn btn-success d-inline-block me-4">
+                            Run
+                        </button>
+                        <select id="js-version-select" class="form-select torrey-select d-inline-block me-4"
+                            aria-label="Select a compiler version" disabled>
+                        </select>
+                        <div id="js-flag-select">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <textarea class="form-control torrey-form-control torrey-form-control--output" readonly
+                    spellcheck="false"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">About the Torrey Playground</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>hello</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
