@@ -46,15 +46,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-8 torrey-controls">
-                        <button type="button" id="js-run" class="btn btn-success d-inline-block me-4">
+                    <div class="col torrey-controls">
+                        <button type="button" id="js-run" class="btn btn-success d-inline-block me-3">
                             Run
                         </button>
-                        <select id="js-version-select" class="form-select torrey-select d-inline-block me-4"
+                        <select id="js-version-select" class="form-select torrey-select d-inline-block me-3"
                             aria-label="Select a compiler version" disabled>
                         </select>
-                        <div id="js-flag-select">
-                        </div>
+                        <select id="js-flag-select" class="form-select torrey-select d-inline-block me-3"
+                            aria-label="Select a compiler flag" disabled>
+                            <option value="" selected>Compile, assemble, and execute</option>
+                        </select>
                     </div>
                 </div>
             </div>
