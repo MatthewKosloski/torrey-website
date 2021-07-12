@@ -62,16 +62,12 @@
             options: { flags, semanticVersion }
         });
 
-        console.log('sending this to lambda', body);
-
-        // fetch('https://yo6quyed5e.execute-api.us-east-1.amazonaws.com/test/compile', {
-        //     method: 'POST',
-        //     headers: {'Content-Type': 'application/json'},
-        //     body
-        // }).then(res => res.json())
-        // .then((json) => console.log('lambda response', json));
-
-
+        fetch('https://yo6quyed5e.execute-api.us-east-1.amazonaws.com/test/compile', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body
+        }).then(res => res.json())
+        .then((json) => console.log('lambda response', json));
     });
 
 })();
