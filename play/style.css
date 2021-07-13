@@ -19,6 +19,10 @@
     height: 500px;
 }
 
+.torrey-console__stderr {
+    color: #dc3545;
+}
+
 .torrey-console {
     background-color: #000;
     border-radius: .25rem;
