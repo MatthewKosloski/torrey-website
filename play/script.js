@@ -67,7 +67,27 @@
             headers: {'Content-Type': 'application/json'},
             body
         }).then(res => res.json())
-        .then((json) => console.log('lambda response', json));
+        .then((json) => {
+            const console = document.querySelector('#js-console');
+            if (json.stdout) {
+                const span = document.createElement('span');
+                span.setAttribute('class', 'torrey-console__stdout');
+                span.textContent = json.stdout;
+                console.appendChild(span);
+                const cursor = document.createElement('span');
+                cursor.innerHTML = '&gt;';
+                console.appendChild(cursor);
+            }
+            if (json.stderr) {
+                const span = document.createElement('span');
+                span.setAttribute('class', 'torrey-console__stderr');
+                span.textContent = json.stderr;
+                console.appendChild(span);
+                const cursor = document.createElement('span');
+                cursor.innerHTML = '&gt;';
+                console.appendChild(cursor);
+            }
+        });
     });
 
 })();

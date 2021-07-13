@@ -8,12 +8,16 @@
     justify-content: flex-start;
 }
 
-.torrey-form-control {
-    font-family: consolas;
-    height: 25vh;
+.torrey-program, 
+.torrey-console {
+    font-family: Menlo, monospace;
+    height: 500px;
 }
 
-.torrey-form-control--output[readonly] {
+.torrey-console {
     background-color: #000;
+    border-radius: .25rem;
+    margin: 0;
+    padding: .375rem .75rem;
     color: #fff;
 }

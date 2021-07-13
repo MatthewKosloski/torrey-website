@@ -37,8 +37,7 @@
             <div class="col">
                 <div class="row mb-4">
                     <div class="col">
-                        <textarea id="js-textarea-input" class="form-control torrey-form-control torrey-form-control--input"
-                            spellcheck="false">
+                        <textarea id="js-textarea-input" class="form-control torrey-program" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" wrap="off">
 (println
   (let [x 2 y (* 2 x)]
     (+ x y)))
@@ -61,8 +60,9 @@
                 </div>
             </div>
             <div class="col">
-                <textarea class="form-control torrey-form-control torrey-form-control--output" readonly
-                    spellcheck="false"></textarea>
+                <pre id="js-console" class="torrey-console">
+<span class="torrey-console__heading">torreyc 3.0.0</span>
+                </pre>
             </div>
         </div>
     </div>
