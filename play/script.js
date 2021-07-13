@@ -1,3 +1,6 @@
+// This JavaScript code is utter crap. But don't worry. This app
+// is just a prototype until I find time to make a better one.
+// I literally just wanted to have a semi-functional product ASAP.
 (async function(){
     let supportedSemanticVersions;
     let supportedFlags;
