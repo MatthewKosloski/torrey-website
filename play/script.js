@@ -72,7 +72,7 @@
             if (json.stdout) {
                 const span = document.createElement('span');
                 span.setAttribute('class', 'torrey-console__stdout');
-                span.textContent = json.stdout.trim() + "\n";
+                span.textContent = json.stdout;
                 console.appendChild(span);
                 const cursor = document.createElement('span');
                 cursor.innerHTML = '&gt;';
@@ -81,7 +81,7 @@
             if (json.stderr) {
                 const span = document.createElement('span');
                 span.setAttribute('class', 'torrey-console__stderr');
-                span.textContent = json.stderr.trim() + "\n";
+                span.textContent = json.stderr;
                 console.appendChild(span);
                 const cursor = document.createElement('span');
                 cursor.innerHTML = '&gt;';
