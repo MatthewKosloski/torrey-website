@@ -8,6 +8,11 @@
     justify-content: flex-start;
 }
 
+.torrey-console__stdout,
+.torrey-console__stderr {
+    display: block;
+}
+
 .torrey-program, 
 .torrey-console {
     font-family: Menlo, monospace;
