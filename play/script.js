@@ -48,9 +48,12 @@
     flagSelectContainer.disabled = false;
 
     const btnRun = document.querySelector('#js-run');
-
+    const spinner = document.querySelector('#js-spinner');
 
     btnRun.addEventListener('click', () => {
+        btnRun.disabled = true;
+        btnRun.textContent = "Waiting for server... ";
+        spinner.classList.remove('d-none');
         const flag = document.querySelector('#js-flag-select').value;
         const semanticVersion = document.querySelector('#js-version-select').value;
 
@@ -87,6 +90,9 @@
                 cursor.innerHTML = '&gt;';
                 console.appendChild(cursor);
             }
+            btnRun.disabled = false;
+            btnRun.textContent = "Run";
+            spinner.classList.add('d-none');
         });
     });
 
