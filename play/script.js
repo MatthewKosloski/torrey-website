@@ -51,12 +51,24 @@
     flagSelectContainer.disabled = false;
 
     const btnRun = document.querySelector('#js-run');
-    const spinner = document.querySelector('#js-spinner');
+
+    const createSpinner = () => {
+        const container = document.createElement('div');
+        container.setAttribute('id', 'js-spinner');
+        container.setAttribute('class', 'spinner-border spinner-border-sm');
+        container.setAttribute('role', 'status');
+        const text = document.createElement('span');
+        text.setAttribute('class', 'sr-only');
+        text.textContent = "Loading...";
+        container.appendChild(text);
+        return container;
+    }
 
     btnRun.addEventListener('click', () => {
         btnRun.disabled = true;
         btnRun.textContent = "Waiting for server... ";
-        spinner.classList.remove('d-none');
+        btnRun.appendChild(createSpinner());
+
         const flag = document.querySelector('#js-flag-select').value;
         const semanticVersion = document.querySelector('#js-version-select').value;
 
@@ -93,9 +105,10 @@
                 cursor.innerHTML = '&gt;';
                 console.appendChild(cursor);
             }
+            
             btnRun.disabled = false;
             btnRun.textContent = "Run";
-            spinner.classList.add('d-none');
+            document.getElementById('js-spinner').remove();
         });
     });
 
