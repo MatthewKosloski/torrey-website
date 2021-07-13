@@ -20,4 +20,5 @@
     margin: 0;
     padding: .375rem .75rem;
     color: #fff;
+    white-space: pre-line;
 }
