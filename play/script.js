@@ -80,7 +80,7 @@
             options: { flags, semanticVersion }
         });
 
-        fetch('https://d966v3jp76.execute-api.us-east-1.amazonaws.com/stage-test/compile', {
+        fetch('https://76d1wru3x7.execute-api.us-east-1.amazonaws.com/stage-test/compile', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body
